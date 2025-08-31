@@ -1,0 +1,31 @@
+/* Custom Portfolio Styles */
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe') no-repeat center center/cover;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Project Cards */
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Section Titles */
+h2 {
+  font-weight: bold;
+}
