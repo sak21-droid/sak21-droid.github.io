@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saksham Kheter Pal | Data Scientist & Analytics Expert</title>
+  <title>Alex Chen | Data Scientist & Analytics Expert</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
@@ -401,7 +401,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">Saksham Kheter Pal</a>
+      <a class="navbar-brand" href="#home">Alex Chen</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -421,7 +421,7 @@
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-content text-center">
-        <h1 class="fade-in-up">Hi, I'm Saksham Kheter Pal <span class="typing"></span></h1>
+        <h1 class="fade-in-up">Hi, I'm Alex Chen <span class="typing"></span></h1>
         <p class="fade-in-up">Passionate Data Scientist transforming complex data into actionable insights. I love solving real-world problems through machine learning, analytics, and beautiful visualizations.</p>
         <div class="fade-in-up">
           <a href="#projects" class="btn-hero">View My Work</a>
@@ -447,7 +447,7 @@
               <div class="col-md-8">
                 <h4 style="color: var(--dark-color); margin-bottom: 1.5rem; font-weight: 600;">Data Scientist & Analytics Expert</h4>
                 <p style="color: var(--secondary-color); margin-bottom: 1rem;">
-                  I'm a passionate data scientist with experience turning complex datasets into meaningful stories. My journey began with a curiosity about patterns in everyday life, which led me to pursue data science as a way to uncover hidden insights.
+                  I'm a passionate data scientist with 3+ years of experience turning complex datasets into meaningful stories. My journey began with a curiosity about patterns in everyday life, which led me to pursue data science as a way to uncover hidden insights.
                 </p>
                 <p style="color: var(--secondary-color); margin-bottom: 1rem;">
                   I specialize in machine learning, statistical analysis, and data visualization. When I'm not coding, you'll find me exploring new datasets, contributing to open-source projects, or sharing my learnings through technical blogs.
@@ -489,7 +489,7 @@
                 <span class="badge bg-warning text-dark me-1">API Integration</span>
               </div>
               <a href="project-falcon9.html" class="btn-project">Read Case Study</a>
-              <a href="https://github.com/sak21-droid/falcon9-predictor" class="btn-project-outline">
+              <a href="https://github.com/alexchen/falcon9-predictor" class="btn-project-outline">
                 <i class="fab fa-github"></i> Code
               </a>
             </div>
@@ -645,7 +645,7 @@
             </div>
             <div>
               <strong>Email</strong><br>
-              <span>saksham212002@gmail.com</span>
+              <span>alex.chen@email.com</span>
             </div>
           </a>
           <a href="https://linkedin.com/in/alexchen-ds" class="contact-item" target="_blank">
@@ -657,7 +657,7 @@
               <span>Connect with me professionally</span>
             </div>
           </a>
-          <a href="https://github.com/sak21-droid" class="contact-item" target="_blank">
+          <a href="https://github.com/alexchen" class="contact-item" target="_blank">
             <div class="contact-icon">
               <i class="fab fa-github"></i>
             </div>
@@ -683,7 +683,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Alex Chen. Crafted with <i class="fas fa-heart text-danger"></i> and lots of ☕</p>
+      <p>&copy; 2025 Saksham Kheter Pal. Crafted with <i class="fas fa-heart text-danger"></i> and lots of ☕</p>
       <p><small>Built with Bootstrap & custom CSS • Hosted on GitHub Pages</small></p>
     </div>
   </footer>
@@ -704,6 +704,113 @@
           });
         }
       });
+    });
+
+    // Projects Carousel Functionality
+    let currentSlide = 0;
+    const projectsTrack = document.getElementById('projectsTrack');
+    const slides = document.querySelectorAll('.project-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const totalSlides = slides.length;
+    const slidesToShow = window.innerWidth > 992 ? 3 : window.innerWidth > 768 ? 2 : 1;
+    const maxSlide = totalSlides - slidesToShow;
+
+    function updateCarousel() {
+      const slideWidth = 100 / slidesToShow;
+      const translateX = -(currentSlide * slideWidth);
+      projectsTrack.style.transform = `translateX(${translateX}%)`;
+      
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === Math.floor(currentSlide / slidesToShow * (indicators.length - 1)));
+      });
+      
+      // Update button states
+      prevBtn.disabled = currentSlide === 0;
+      nextBtn.disabled = currentSlide >= maxSlide;
+    }
+
+    function nextSlide() {
+      if (currentSlide < maxSlide) {
+        currentSlide++;
+        updateCarousel();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+      }
+    }
+
+    function goToSlide(slideIndex) {
+      currentSlide = Math.min(slideIndex, maxSlide);
+      updateCarousel();
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        const targetSlide = Math.floor(index / indicators.length * maxSlide);
+        goToSlide(targetSlide);
+      });
+    });
+
+    // Auto-play carousel (optional)
+    let autoPlayInterval = setInterval(nextSlide, 5000);
+
+    // Pause auto-play on hover
+    const carouselContainer = document.querySelector('.projects-carousel-container');
+    carouselContainer.addEventListener('mouseenter', () => {
+      clearInterval(autoPlayInterval);
+    });
+
+    carouselContainer.addEventListener('mouseleave', () => {
+      autoPlayInterval = setInterval(nextSlide, 5000);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    });
+
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+
+    carouselContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    carouselContainer.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+      
+      if (Math.abs(diffX) > 50) { // Minimum swipe distance
+        if (diffX > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    });
+
+    // Initialize carousel
+    updateCarousel();
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      const newSlidesToShow = window.innerWidth > 992 ? 3 : window.innerWidth > 768 ? 2 : 1;
+      if (newSlidesToShow !== slidesToShow) {
+        location.reload(); // Reload to recalculate slides
+      }
     });
 
     // Typing animation
@@ -770,5 +877,3 @@
   </script>
 </body>
 </html>
-
-
