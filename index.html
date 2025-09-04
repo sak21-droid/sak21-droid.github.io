@@ -271,96 +271,107 @@
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
       <p class="text-center mb-5" style="color: var(--secondary-color); font-size: 1.1rem;">
-        Here are some of my favorite projects that showcase different aspects of data science and analytics
+        Here are some of my projects that showcase different aspects of data science and analytics
       </p>
 
-      <!-- Carousel START -->
-      <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
-          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
-          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- First set of 3 projects -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card h-100">
+                <h5>🚀 SpaceX Falcon 9 Predictor</h5>
+                <p>Built ML pipeline to predict rocket landings with 89% accuracy.</p>
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-success">Scikit-learn</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-card h-100">
+                <h5>🥘 Food Waste Management</h5>
+                <p>Analytics platform to reduce restaurant food waste by 35%.</p>
+                <span class="badge bg-info">Tableau</span>
+                <span class="badge bg-danger">Time Series</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-card h-100">
+                <h5>🌊 Ocean Wave Analysis</h5>
+                <p>Applied PCA/SVD to video data to extract spatial-temporal patterns.</p>
+                <span class="badge bg-secondary">Computer Vision</span>
+                <span class="badge bg-success">PCA/SVD</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="carousel-inner">
-
-          <!-- Project 1 -->
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="project-card">
-                  <div class="card-body p-4">
-                    <div class="project-icon"><i class="fas fa-rocket"></i></div>
-                    <h5>🚀 SpaceX Falcon 9 Landing Predictor</h5>
-                    <p>Built a machine learning pipeline to predict successful Falcon 9 rocket landings using historical launch data, weather conditions, and technical specifications. Achieved 89% accuracy using ensemble methods.</p>
-                    <div class="project-tags mb-3">
-                      <span class="badge bg-primary me-1">Python</span>
-                      <span class="badge bg-success me-1">Scikit-learn</span>
-                      <span class="badge bg-warning text-dark me-1">API Integration</span>
-                    </div>
-                    <a href="project-falcon9.html" class="btn-project">Read Case Study</a>
-                  </div>
-                </div>
+        <!-- Second set of 3 projects -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card h-100">
+                <h5>🧠 AI Psychology Explorer</h5>
+                <p>Developed NLP models to analyze psychological patterns in text.</p>
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-warning">NLP</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-card h-100">
+                <h5>🏡 House Price Estimation</h5>
+                <p>Regression model predicting housing prices with high accuracy.</p>
+                <span class="badge bg-success">Regression</span>
+                <span class="badge bg-info">Scikit-learn</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-card h-100">
+                <h5>🖼️ CNN Denoising Autoencoder</h5>
+                <p>Deep learning model to denoise the MNIST dataset using autoencoders.</p>
+                <span class="badge bg-danger">TensorFlow</span>
+                <span class="badge bg-dark">CNN</span>
               </div>
             </div>
           </div>
-
-          <!-- Project 2 -->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="project-card">
-                  <div class="card-body p-4">
-                    <div class="project-icon"><i class="fas fa-leaf"></i></div>
-                    <h5>🥘 Smart Food Waste Reduction</h5>
-                    <p>Developed an analytics platform for restaurants to optimize inventory and reduce food waste by 35%. Built predictive models for demand forecasting and created interactive dashboards for decision-making.</p>
-                    <div class="project-tags mb-3">
-                      <span class="badge bg-primary me-1">Python</span>
-                      <span class="badge bg-info me-1">Tableau</span>
-                      <span class="badge bg-danger me-1">Time Series</span>
-                    </div>
-                    <a href="project-foodwaste.html" class="btn-project">Read Case Study</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="project-card">
-                  <div class="card-body p-4">
-                    <div class="project-icon"><i class="fas fa-water"></i></div>
-                    <h5>🌊 Ocean Wave Pattern Analysis</h5>
-                    <p>Applied dimensionality reduction techniques (PCA/SVD) to analyze ocean wave video data for marine research. Extracted key patterns and created interactive visualizations for researchers to explore wave dynamics.</p>
-                    <div class="project-tags mb-3">
-                      <span class="badge bg-primary me-1">Python</span>
-                      <span class="badge bg-secondary me-1">Computer Vision</span>
-                      <span class="badge bg-success me-1">PCA/SVD</span>
-                    </div>
-                    <a href="project-waves.html" class="btn-project">Read Case Study</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev" aria-label="Previous project">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next" aria-label="Next project">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+        <!-- Third set of 1 project (centered) -->
+        <div class="carousel-item">
+          <div class="row justify-content-center g-4">
+            <div class="col-md-4">
+              <div class="project-card h-100">
+                <h5>🚲 Bike-Share Analytics</h5>
+                <p>Case study analyzing urban bike usage patterns and demand prediction.</p>
+                <span class="badge bg-info">Python</span>
+                <span class="badge bg-primary">Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <!-- Carousel END -->
 
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
+
+
+
+
+      
   <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <div class="container">
@@ -514,3 +525,4 @@
   </script>
 </body>
 </html>
+
