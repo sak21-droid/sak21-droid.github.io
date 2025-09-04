@@ -267,16 +267,14 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="text-center mb-5" style="color: var(--secondary-color); font-size: 1.1rem;">
-        Here are some of my projects that showcase different aspects of data science and analytics
-      </p>
-
+<!-- Projects Section -->
 <section id="projects" class="projects-section">
   <div class="container">
     <h2 class="section-title">Featured Projects</h2>
+    <p class="text-center mb-5" style="color: var(--secondary-color); font-size: 1.1rem;">
+      Here are some of my projects that showcase different aspects of data science and analytics
+    </p>
+
     <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
@@ -331,20 +329,6 @@
             </div>
             <div class="col-md-4">
               <div class="project-card h-100">
-                <h5>🖼️ CNN Denoising Autoencoder</h5>
-                <p>Deep learning model to denoise the MNIST dataset using autoencoders.</p>
-                <span class="badge bg-danger">TensorFlow</span>
-                <span class="badge bg-dark">CNN</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Third set of 1 project (centered) -->
-        <div class="carousel-item">
-          <div class="row justify-content-center g-4">
-            <div class="col-md-4">
-              <div class="project-card h-100">
                 <h5>🚲 Bike-Share Analytics</h5>
                 <p>Case study analyzing urban bike usage patterns and demand prediction.</p>
                 <span class="badge bg-info">Python</span>
@@ -355,6 +339,16 @@
         </div>
 
       </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
 
       <!-- Carousel Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
@@ -525,4 +519,5 @@
   </script>
 </body>
 </html>
+
 
