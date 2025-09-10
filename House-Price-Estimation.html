@@ -1,92 +1,98 @@
-<section class="project">
-  <div class="project-card">
-    <div class="project-img">
-      <img src="images/project1.png" alt="Project Screenshot">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Price Estimation | Saksham Kheter Pal</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"> <!-- same CSS as main site -->
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Saksham Kheter Pal</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#projects">← Back to Projects</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="project-info">
-      <h3>House Price Estimation</h3>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container text-center hero-content">
+      <h1 class="fade-in-up">House Price Estimation</h1>
+      <p class="lead">Ensemble regression model for predicting housing prices with feature engineering & data integration.</p>
+    </div>
+  </section>
+
+  <!-- Project Details -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">Overview</h2>
+      <p class="section-subtitle">Details about the dataset, approach, and results</p>
+      
+      <div class="about-card">
+        <h4>Problem Statement</h4>
+        <p>Housing markets fluctuate due to numerous factors. The goal was to predict house prices using a regression model trained on historical data.</p>
+        
+        <h4>Methodology</h4>
+        <ul>
+          <li>Data cleaning & preprocessing</li>
+          <li>Feature engineering (location, size, amenities, etc.)</li>
+          <li>Modeling with Linear Regression, Random Forests, XGBoost</li>
+          <li>Model stacking for improved accuracy</li>
+        </ul>
+        
+        <h4>Results</h4>
+        <p>The final ensemble achieved <strong>92% R²</strong> score on the validation set, outperforming baseline models.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="contact-grid">
+      <a href="mailto:saksham.kheterpal@email.com" class="contact-item">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div><strong>Email</strong><br><small>saksham.kheterpal@email.com</small></div>
+      </a>
+      <a href="https://linkedin.com/in/saksham-kheterpal" class="contact-item" target="_blank">
+        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+        <div><strong>LinkedIn</strong><br><small>Connect professionally</small></div>
+      </a>
+      <a href="https://github.com/saksham-kheterpal" class="contact-item" target="_blank">
+        <div class="contact-icon"><i class="fab fa-github"></i></div>
+        <div><strong>GitHub</strong><br><small>See my code</small></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Saksham K. All rights reserved.</p>
       <p>
-        Short description of what the project does, tech stack used, and outcomes.
+        <a href="https://linkedin.com/in/saksham-kheterpal" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/saksham-kheterpal" target="_blank">GitHub</a> | 
+        <a href="mailto:saksham.kheterpal@email.com">Email</a>
       </p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<style>
-/* Project Section */
-.project {
-  padding: 4rem 2rem;
-  background: var(--dark); /* same scheme */
-  color: white;
-}
-
-.project-card {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto 3rem auto;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-img img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 12px 0 0 12px;
-}
-
-.project-info {
-  flex: 1;
-  padding: 1.5rem;
-}
-
-.project-info h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--primary);
-}
-
-.project-info p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.85);
-}
-
-.project-info .btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--primary);
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.project-info .btn:hover {
-  background: #1fa2ff; /* lighter blue */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  .project-img img {
-    border-radius: 12px 12px 0 0;
-    max-width: 100%;
-  }
-}
-
-
-  
-</style>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
