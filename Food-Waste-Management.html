@@ -8,15 +8,22 @@
       <p>
         Short description of what the project does, tech stack used, and outcomes.
       </p>
+      <a href="project1.html" class="btn">View Project</a>
     </div>
   </div>
 </section>
 
 <style>
+:root {
+  --dark: #0a0a0a;
+  --primary: #0077ff;
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+}
+
 /* Project Section */
 .project {
   padding: 4rem 2rem;
-  background: var(--dark); /* same scheme */
+  background: var(--dark);
   color: white;
 }
 
@@ -71,8 +78,8 @@
   transition: background 0.3s;
 }
 
-.project-info .btn: hover {
-  background: #1fa2ff; /* lighter blue */
+.project-info .btn:hover {
+  background: #1fa2ff;
 }
 
 /* Responsive */
@@ -82,11 +89,8 @@
     text-align: center;
   }
   .project-img img {
-
     border-radius: 12px 12px 0 0;
     max-width: 100%;
   }
 }
-  </style>
-
-
+</style>
