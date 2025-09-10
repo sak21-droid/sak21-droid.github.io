@@ -481,69 +481,76 @@
     }
 
     /* Contact Section */
-    .contact-section {
-      background: var(--primary);
-      color: white;
-    }
+.contact-section {
+  background: var(--primary);
+  color: white;
+  padding-bottom: 6rem;
+}
 
-    .contact-section .section-title,
-    .contact-section .section-subtitle {
-      color: white;
-    }
+    .contact-section .contact-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
 
-    .contact-section .section-title::after {
-      background: white;
-    }
+.contact-section .contact-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .contact-item:hover {
-      background: rgba(255, 255, 255, 0.15);
-      color: white;
-      transform: translateX(5px);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .contact-icon {
-      font-size: 1.25rem;
-      margin-right: 1rem;
-      color: white;
-      width: 60px;
-      height: 60px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
+.contact-section .contact-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
     /* Footer */
     .footer {
-      background: var(--dark);
-      color: rgba(255, 255, 255, 0.8);
-      padding: 2.5rem 0;
-      text-align: center;
-    }
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 3rem 0 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  position: relative;
+}
 
-    .footer p {
-      margin-bottom: 0.5rem;
-    }
+.footer p {
+  margin-bottom: 0.5rem;
+}
 
-    .footer small {
-      color: rgba(255, 255, 255, 0.6);
-    }
+.footer small {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .social-links {
+  margin-top: 1rem;
+}
+
+.footer .social-links a {
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-links a: hover {
+  color: white;
+  transform: translateY(-3px);
+}
 
     /* Animations */
     @keyframes fadeInUp {
@@ -1014,17 +1021,18 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <p>&copy; 2025 Saksham Kheter Pal. Built with precision and attention to detail.</p>
-          <p><small>Professional Portfolio • Data Science & Analytics Expert</small></p>
-        </div>
-      </div>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Saksham Kheter Pal. Built with precision and attention to detail.</p>
+    <p><small>Professional Portfolio • Data Science & Analytics Expert</small></p>
+    <div class="social-links mt-3">
+      <a href="https://linkedin.com/in/saksham-kheterpal" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/saksham-kheterpal" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="mailto:saksham.kheterpal@email.com"><i class="fas fa-envelope"></i></a>
     </div>
-  </footer>
-
+  </div>
+</footer>
+          
   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
@@ -1150,3 +1158,4 @@
     }
   </script>
   
+
