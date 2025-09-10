@@ -547,14 +547,15 @@
 }
 
     
-    /* Footer */
-    .footer {
+/* Footer */
+.footer {
   background: var(--dark);
   color: rgba(255, 255, 255, 0.8);
-  padding: 3rem 0 2rem;
+  padding: 3rem 1rem 2rem;
   text-align: center;
   font-size: 0.9rem;
-  position: relative;
+  width: 100vw;           /* ensure full width */
+  margin-left: calc(-50vw + 50%); /* centers full-width footer */
 }
 
 .footer p {
@@ -575,7 +576,7 @@
   transition: color 0.3s, transform 0.3s;
 }
 
-.footer .social-links a: hover {
+.footer .social-links a:hover {
   color: white;
   transform: translateY(-3px);
 }
@@ -1017,15 +1018,14 @@
 </section>
 
   <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Saksham Kheter Pal. Built with precision and attention to detail.</p>
-    <p><small>Professional Portfolio • Data Science & Analytics Expert</small></p>
-    <div class="social-links mt-3">
-      <a href="https://linkedin.com/in/saksham-kheterpal" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/saksham-kheterpal" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-      <a href="mailto:saksham.kheterpal@email.com"><i class="fas fa-envelope"></i></a>
-    </div>
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Saksham K. All rights reserved.</p>
+    <p>
+      <a href="https://linkedin.com/in/saksham-kheterpal" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+      <a href="https://github.com/saksham-kheterpal" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+      <a href="mailto:saksham.kheterpal@email.com">Email</a>
+    </p>
   </div>
 </footer>
           
@@ -1154,6 +1154,7 @@
     }
   </script>
   
+
 
 
 
