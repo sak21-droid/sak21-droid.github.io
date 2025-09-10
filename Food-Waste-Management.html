@@ -3,130 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Waste Management System</title>
-  <style>
-    :root {
-      --dark: #0a0a0a;
-      --primary: #0077ff;
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--dark);
-      color: white;
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--primary);
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: white;
-    }
-
-    .project-container {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      box-shadow: var(--shadow-md);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .project-img {
-      flex: 1 1 300px;
-    }
-
-    .project-img img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: var(--shadow-md);
-    }
-
-    .project-info {
-      flex: 2 1 400px;
-    }
-
-    .project-info h2 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .project-info p {
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 1rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background: var(--primary);
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #1fa2ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-      margin-top: 3rem;
-      background: rgba(255,255,255,0.05);
-    }
-
-    @media (max-width: 768px) {
-      .project-container {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
+  <title>House Price Estimation | Saksham Kheter Pal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- reuse same CSS -->
 </head>
 <body>
-  <header>
-    <h1>Food Waste Management System</h1>
-  </header>
-
-  <main>
-    <div class="project-container">
-      <div class="project-img">
-        <img src="images/project1.png" alt="Food Waste Management Screenshot">
-      </div>
-      <div class="project-info">
-        <h2>About the Project</h2>
-        <p>
-          This system helps reduce food waste by connecting restaurants, stores, 
-          and individuals with surplus food to local charities and consumers.
-        </p>
-        <p>
-          <strong>Tech Stack:</strong> Python, Flask, MySQL, Bootstrap
-        </p>
-        <p>
-          <strong>Duration:</strong> 2 Months Internship Project
-        </p>
-        <a href="index.html" class="btn">← Back to Portfolio</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Saksham Kheter Pal</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">← Back to Projects</a></li>
+        </ul>
       </div>
     </div>
-  </main>
+  </nav>
 
-  <footer>
-    <p>&copy; 2025 Saksham | All rights reserved.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container text-center hero-content">
+      <h1 class="fade-in-up">House Price Estimation</h1>
+      <p class="lead">Ensemble regression model for predicting housing prices with feature engineering & data integration.</p>
+    </div>
+  </section>
+
+  <!-- Project Details -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">Overview</h2>
+      <p class="section-subtitle">Details about the dataset, approach, and results</p>
+      
+      <div class="about-card">
+        <h4>Problem Statement</h4>
+        <p>Housing markets fluctuate due to numerous factors. The goal was to predict house prices using a regression model trained on historical data.</p>
+        
+        <h4>Methodology</h4>
+        <ul>
+          <li>Data cleaning & preprocessing</li>
+          <li>Feature engineering (location, size, amenities, etc.)</li>
+          <li>Modeling with Linear Regression, Random Forests, XGBoost</li>
+          <li>Model stacking for improved accuracy</li>
+        </ul>
+        
+        <h4>Results</h4>
+        <p>The final ensemble achieved <strong>92% R²</strong> score on the validation set, outperforming baseline models.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact + Footer (same as main) -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title text-white">Let's Connect</h2>
+    <div class="contact-grid">
+      <a href="mailto:youremail@gmail.com" class="contact-item">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div><strong>Email</strong><br><small>youremail@gmail.com</small></div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Saksham Kheter Pal. All rights reserved.</p>
   </footer>
 </body>
 </html>
